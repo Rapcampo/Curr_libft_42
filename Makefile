@@ -7,8 +7,8 @@ DEPFLG	= -MP -MD
 
 # ============================ Folder Structures ===============================
 
-#HEADERS		= includes/
-SOURCE_DIR	= srcs/ctype srcs/list srcs/stdio srcs/stdlib srcs/string srcs/prinft
+HEADERS		= includes/
+SOURCE_DIR	= srcs/ctype srcs/list srcs/stdio srcs/stdlib srcs/string srcs/printf
 OBJS_DIR	= objs/
 
 # ============================ Commands & Flags ===============================
@@ -16,7 +16,7 @@ OBJS_DIR	= objs/
 CC			= cc
 RM			= rm -rf
 AR			= ar -rcs
-FLAGS		= -Wall -Werror -Wextra -I. #$(DEPFLG)
+FLAGS		= -Wall -Werror -Wextra -I$(HEADERS) #$(DEPFLG)
 MAKE_FLAG	= --no-print-directory
 
 # =========================== Ansi Escape Codes ================================
