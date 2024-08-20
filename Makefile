@@ -1,14 +1,14 @@
 # ================================= Files ======================================
 
 NAME	= libft.a
-SOURCE	= $(foreach dir, $(SOURCE_DIR), $(wildcard $(dir)/ft_*.c)) 
+SOURCE	= $(foreach dir, $(SOURCE_DIR), $(wildcard $(dir)/*.c)) 
 OBJS	= objs/*.o
 DEPFLG	= -MP -MD
 
 # ============================ Folder Structures ===============================
 
 HEADERS		= includes/
-SOURCE_DIR	= srcs/ctype srcs/list srcs/stdio srcs/stdlib srcs/string srcs/printf
+SOURCE_DIR	= srcs/ctype srcs/list srcs/stdio srcs/stdlib srcs/string srcs/printf srcs/gnl
 OBJS_DIR	= objs/
 
 # ============================ Commands & Flags ===============================
@@ -62,6 +62,6 @@ fclean: clean
 
 re: fclean all
 
-.SILENT:
+//.SILENT:
 
 .PHONY: all clean fclean re
